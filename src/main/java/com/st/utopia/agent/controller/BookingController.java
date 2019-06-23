@@ -30,7 +30,7 @@ import com.st.utopia.agent.model.User;
 @RequestMapping("/booking")
 public class BookingController {
 	@Autowired
-	RestTemplate restTemplate;
+	private RestTemplate restTemplate;
 
 	@Value("${utopia.booking-service-hostName}")
 	private String hostName;
