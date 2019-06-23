@@ -13,6 +13,12 @@ public class RestTemplateResponseErrorHandler implements ResponseErrorHandler {
 		return false;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see org.springframework.web.client.ResponseErrorHandler#handleError(org.springframework.http.client.ClientHttpResponse)
+	 *
+	 * Do not need to handle http error codes, just pass it through
+	 */
 	@Override
 	public void handleError(ClientHttpResponse httpResponse) {}
 }
