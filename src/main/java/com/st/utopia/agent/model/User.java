@@ -44,7 +44,7 @@ public class User {
 	private String phone;
 
 	/**
-	 * Default constructor, for JPA.
+	 * Default constructor
 	 */
 	public User() {
 	}

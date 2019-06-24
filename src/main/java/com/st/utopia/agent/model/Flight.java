@@ -54,7 +54,7 @@ public class Flight implements Serializable {
 	private int flightNumber;
 
 	/**
-	 * Default constructor, for JPA.
+	 * Default constructor
 	 */
 	public Flight() {
 	}

@@ -7,7 +7,7 @@ import java.util.Objects;
  * An airport that flights can fly to or from.
  *
  * Objects of this class should in general be immutable, so no setters are
- * provided, but to support JPA providers fields are not made final.
+ * provided.
  *
  * This class is Serializable because AirportDateDTO has to be and contains a
  * reference to this class.
@@ -43,8 +43,8 @@ public class Airport implements Serializable {
 	public String getName() {
 		return name;
 	}
-	/**
-	 * Default constructor, provided for JPA.
+	/*
+	 * default constructor
 	 */
 	public Airport() {
 	}
