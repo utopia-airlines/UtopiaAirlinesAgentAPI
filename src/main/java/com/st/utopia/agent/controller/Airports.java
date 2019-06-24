@@ -64,7 +64,7 @@ public class Airports {
 	public ResponseEntity<Ticket> getAllAirportsWithId(
 			@PathVariable final String code) {
 		// FIXME: Search service doesn't yet provide this
-		String url = searchAPI + "/airports/" + code;
+		String url = searchAPI + "/airportDetails?airport=" + code;
 		return this.<Ticket>methodCall(url, HttpMethod.GET);
 	}
 }
