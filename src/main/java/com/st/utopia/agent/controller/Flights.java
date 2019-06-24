@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.RestTemplate;
 
-import com.st.utopia.agent.model.Airport;
 import com.st.utopia.agent.model.Flight;
-import com.st.utopia.agent.model.Ticket;
 
 public class Flights {
 	@Autowired
