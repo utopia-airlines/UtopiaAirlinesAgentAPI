@@ -18,12 +18,7 @@ import java.util.Objects;
  * @author Jonathan Lovelace
  * @author Salem O
  */
-public class Flight implements Serializable {
-	/**
-	 * Serialization version. Increment on any change to class structure that is (to
-	 * be) pushed to production.
-	 */
-	private static final long serialVersionUID = 1L;
+public class Flight {
 
 	/**
 	 * The flight's ID number in the database.

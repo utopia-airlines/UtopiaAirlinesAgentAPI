@@ -13,12 +13,7 @@ import java.util.Objects;
  * @author Jonathan Lovelace
  * @author Salem O
  */
-public class SeatLocation implements Serializable {
-    /**
-     * Serialization version. Increment on any change to class structure that is
-     * (to be) pushed to production.
-     */
-    private static final long serialVersionUID = 1L;
+public class SeatLocation {
 
     /**
      * The flight this seat is on.
