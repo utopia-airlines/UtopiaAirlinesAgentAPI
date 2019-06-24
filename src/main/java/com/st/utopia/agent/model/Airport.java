@@ -44,13 +44,6 @@ public class Airport {
 	public Airport() {
 	}
 	/**
-	 * Non-default constructor, provided for tests.
-	 */
-	public Airport(final String code, final String name) {
-		this.code = code;
-		this.name = name;
-	}
-	/**
 	 * An object is equal to this one iff it is an Airport with the same code.
 	 */
 	@Override
