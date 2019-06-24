@@ -52,19 +52,16 @@ public class Airports {
 	}
 
 	/**
-	 * Reserve a ticket for the given seat.
-	 * @param flight the flight number of the flight
-	 * @param row the row number of the seat
-	 * @param seat the seat within the row
-	 * @param user the user details
+	 * Get a list of airports matching the given code
+	 * @param airport code
 	 * 
-	 * @return the ticket that was created by this post
+	 * @return list of airports
 	 */
 	@GetMapping("/airports/{code}")
-	public ResponseEntity<Ticket> getAllAirportsWithId(
+	public ResponseEntity<Airport> getAllAirportsWithId(
 			@PathVariable final String code) {
 		// FIXME: Search service doesn't yet provide this
 		String url = searchAPI + "/airportDetails?airport=" + code;
-		return this.<Ticket>methodCall(url, HttpMethod.GET);
+		return this.<Airport>methodCall(url, HttpMethod.GET);
 	}
 }
