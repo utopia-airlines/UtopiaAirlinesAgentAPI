@@ -32,13 +32,13 @@ public class BookingController {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	@Value("${utopia.booking-service-hostName}")
+	@Value("${utopia.booking.service.hostName}")
 	private String hostName;
 
-	@Value("${utopia.booking-service-port}")
+	@Value("${utopia.booking.service.port}")
 	private String port;
 	
-	@Value("${utopia.booking-service-controller-root}")
+	@Value("${utopia.booking.service.controller.root}")
 	private String root;
 	
 	/**
