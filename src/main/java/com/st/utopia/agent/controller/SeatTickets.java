@@ -81,9 +81,12 @@ public class SeatTickets {
 	}
 
 	/**
-	 * Get list of seats on a given flight
+	 * Get a ticket given a flightId, row and seat
 	 * 
-	 * @return list of seats
+	 * @param flightId	the flight identifier
+	 * @param row 		the row in the flight
+	 * @param seatId 	the seat letter
+	 * @return a ticket
 	 */
 	@GetMapping("/flight/{flightId}/seat/{row}/{seatId}")
 	public ResponseEntity<Ticket> getTicket(
