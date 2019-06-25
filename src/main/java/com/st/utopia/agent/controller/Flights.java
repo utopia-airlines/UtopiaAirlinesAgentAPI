@@ -35,7 +35,7 @@ public class Flights {
 	 * @return list of flights
 	 */
 	@GetMapping("/flights")
-	public ResponseEntity<Flight> getAllAirports() {
+	public ResponseEntity<Flight> getAllFlights() {
 		// FIXME: Search service doesn't yet provide this
 		String url = searchAPI + "/flights";
 		return this.<Flight>methodCall(url, HttpMethod.GET);
@@ -48,7 +48,7 @@ public class Flights {
 	 * @return list of airports
 	 */
 	@GetMapping("/flights/{flightId}")
-	public ResponseEntity<Flight> getAllAirportsWithId(
+	public ResponseEntity<Flight> getAllFlightsWithId(
 			@PathVariable final String flightId) {
 		// FIXME: Search service doesn't yet provide this
 		String url = searchAPI + "/flightDetails?flight=" + flightId;
