@@ -41,7 +41,7 @@ public class SeatTickets {
 	private String cancellationAPI;
 	
 	/**
-	 * Helper method to reduce the amount of repetitive code required for "get-all"
+	 * Helper method to reduce the amount of repetitive code required for a method call.
 	 * methods.
 	 * @param url the URL to send the REST request to
 	 * @param <T> the type we expect
