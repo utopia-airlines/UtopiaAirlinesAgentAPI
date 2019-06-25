@@ -182,7 +182,7 @@ public class SeatTickets {
 	 * Cancel reservation
 	 */
 	@DeleteMapping("/booking/{bookingCode}")
-	public ResponseEntity<Object> DeleteReservation(
+	public ResponseEntity<Object> deleteReservation(
 			@PathVariable final String bookingCode) {
 		String url = cancellationAPI + "/ticket/booking-id/" + bookingCode;
 		return this.<Object>methodCall(url, HttpMethod.PUT);
