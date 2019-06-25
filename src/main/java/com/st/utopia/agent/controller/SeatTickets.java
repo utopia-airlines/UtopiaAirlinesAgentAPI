@@ -128,8 +128,6 @@ public class SeatTickets {
 	public ResponseEntity<Ticket> postTicket(
 			@PathVariable final int flightId, @PathVariable final int row,
 			@PathVariable final String seatId, @RequestBody final User reserver) {
-		// not sure if the request body int worked
-		// it should through an error if they do not give a reserver (right?)
 		HttpEntity<User> body = new HttpEntity<>(reserver);
 		String url = bookingAPI + "/book/flights/" + flightId + "/rows/" +
 			row + "/seats/" + seatId;
