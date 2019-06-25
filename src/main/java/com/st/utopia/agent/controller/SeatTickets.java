@@ -154,7 +154,7 @@ public class SeatTickets {
 	 * @return list of tickets
 	 */
 	@GetMapping("/booking/{bookingCode}")
-	public ResponseEntity<Ticket> getAllTicketsWithBookingCode(
+	public ResponseEntity<Ticket> getTicketWithBookingCode(
 			@PathVariable final String bookingCode) {
 		String url = bookingAPI + "/details/bookings/" + bookingCode;
 		return this.<Ticket>methodCall(url, HttpMethod.GET);
