@@ -128,10 +128,10 @@ public class SeatTickets {
 	public ResponseEntity<Ticket> postTicket(
 			@PathVariable final int flightId, @PathVariable final int row,
 			@PathVariable final String seatId, @RequestBody final User reserver) {
-		HttpEntity<User> body = new HttpEntity<>(reserver);
 		String url = bookingAPI + "/book/flights/" + flightId + "/rows/" +
 			row + "/seats/" + seatId;
-		return this.<Ticket, User>methodCall(url, HttpMethod.POST, body);
+		return this.<Ticket, User>methodCall(url, HttpMethod.POST,
+				new HttpEntity<>(reserver));
 	}
 
 	/**
