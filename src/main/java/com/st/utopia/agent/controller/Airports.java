@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.st.utopia.agent.model.Airport;
-import com.st.utopia.agent.model.Ticket;
 
 /**
  * Controller for agents using this user-facing interface
