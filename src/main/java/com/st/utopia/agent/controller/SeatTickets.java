@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 import com.st.utopia.agent.model.PaymentAmount;
 import com.st.utopia.agent.model.SeatLocation;
 import com.st.utopia.agent.model.Ticket;
-import com.st.utopia.agent.model.User;;
+import com.st.utopia.agent.model.User;
 
 /**
  * Controller for agents using this user-facing interface
