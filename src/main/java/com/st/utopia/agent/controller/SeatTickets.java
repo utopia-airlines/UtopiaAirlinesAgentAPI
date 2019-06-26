@@ -75,7 +75,6 @@ public class SeatTickets {
 	@GetMapping("/flight/{flightId}/seats")
 	public ResponseEntity<SeatLocation> getAllSeatsWithPlan(
 			@PathVariable final String flightId) {
-		// FIXME: Search service doesn't yet provide this
 		String url = searchAPI + "/seats?flight=" + flightId;
 		return this.<SeatLocation>methodCall(url, HttpMethod.GET);
 	}
