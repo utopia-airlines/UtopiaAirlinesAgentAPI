@@ -103,19 +103,16 @@ public class SeatTickets {
 	 * @return a ticket or an object
 	 */
 	@PutMapping("/flight/{flightId}/seat/{row}/{seatId}/ticket")
-	public ResponseEntity<Object> updateTicket(
-			@PathVariable final int flightId, @PathVariable final int row,
+	public ResponseEntity<Object> updateTicket(@PathVariable final int flightId, @PathVariable final int row,
 			@PathVariable final String seatId, @RequestBody final PaymentAmount pay) {
 		// may need to just create a new object
 		if (pay.getPrice() == null) {
-			HttpEntity<PaymentAmount> body = new HttpEntity<>(pay);
-			String url = bookingAPI + "/pay/flights/" + flightId + "/rows/" +
-				row + "/seats/" + seatId;
-			return this.<Object, PaymentAmount>methodCall(url, HttpMethod.PUT, body);
-		} else {
-			String url = bookingAPI + "/extend/flights/" + flightId + "/rows/" +
-				row + "/seats/" + seatId;
+			String url = bookingAPI + "/extend/flights/" + flightId + "/rows/" + row + "/seats/" + seatId;
 			return this.<Object>methodCall(url, HttpMethod.PUT);
+		} else {
+			HttpEntity<PaymentAmount> body = new HttpEntity<>(pay);
+			String url = bookingAPI + "/pay/flights/" + flightId + "/rows/" + row + "/seats/" + seatId;
+			return this.<Object, PaymentAmount>methodCall(url, HttpMethod.PUT, body);
 		}
 	}
 
