@@ -163,15 +163,15 @@ public class SeatTickets {
 	 * @return updated ticket
 	 */
 	@PutMapping("/booking/{bookingCode}")
-	public ResponseEntity<Ticket> putBookingCode(
-			@PathVariable final String bookingCode, @RequestBody final PaymentAmount pay) {
-		if (pay.getPrice() != null) {
+	public ResponseEntity<Ticket> putBookingCode(@PathVariable final String bookingCode,
+			@RequestBody final PaymentAmount pay) {
+		if (pay.getPrice() == null) {
+			String url = bookingAPI + "/extend/bookings/" + bookingCode;
+			return this.<Ticket>methodCall(url, HttpMethod.PUT);
+		} else {
 			String url = bookingAPI + "/pay/bookings/" + bookingCode;
 			HttpEntity<PaymentAmount> body = new HttpEntity<>(pay);
 			return this.<Ticket, PaymentAmount>methodCall(url, HttpMethod.PUT, body);
-		} else {
-			String url = bookingAPI + "/extend/bookings/" + bookingCode;
-			return this.<Ticket>methodCall(url, HttpMethod.PUT);
 		}
 	}
 
