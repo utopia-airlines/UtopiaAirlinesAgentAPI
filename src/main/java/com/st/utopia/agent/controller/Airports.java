@@ -19,6 +19,7 @@ import com.st.utopia.agent.model.Airport;
  * @author Salem O
  */
 @RestController
+@CrossOrigin
 public class Airports {
 	@Autowired
 	private RestTemplate restTemplate;
