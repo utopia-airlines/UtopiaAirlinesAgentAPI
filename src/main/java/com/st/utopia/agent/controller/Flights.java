@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.st.utopia.agent.model.Flight;
 
 @RestController
+@CrossOrigin
 public class Flights {
 	@Autowired
 	private RestTemplate restTemplate;
