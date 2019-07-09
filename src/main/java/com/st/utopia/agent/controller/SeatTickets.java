@@ -27,6 +27,7 @@ import com.st.utopia.agent.model.User;
  * @author Salem O
  */
 @RestController
+@CrossOrigin
 public class SeatTickets {
 	@Autowired
 	private RestTemplate restTemplate;
