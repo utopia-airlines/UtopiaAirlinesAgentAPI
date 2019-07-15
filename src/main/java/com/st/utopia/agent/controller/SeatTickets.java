@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.client.RestTemplate;
 
 import com.st.utopia.agent.model.PaymentAmount;
@@ -27,6 +28,7 @@ import com.st.utopia.agent.model.User;
  * @author Salem O
  */
 @RestController
+@CrossOrigin
 public class SeatTickets {
 	@Autowired
 	private RestTemplate restTemplate;
